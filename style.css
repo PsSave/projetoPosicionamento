@@ -16,7 +16,7 @@ ul {
 }
 
 img {
-  max-width: 100%; 
+  max-width: 100%;
   position: block;
 }
 
@@ -46,10 +46,10 @@ p {
   display: flex;
   gap: 1.25rem;
   justify-content: center;
-
+  flex-wrap: wrap;
 }
 
-.menu li{
+.menu li {
   list-style: none;
 }
 
@@ -74,7 +74,7 @@ p {
 }
 
 h1::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 60px;
   height: 4px;
@@ -111,6 +111,11 @@ h1::before {
   background-color: #900;
 }
 
+.introducao-cover img {
+  object-fit: cover;
+  height: 100%;
+}
+
 .subtitulo {
   font-size: 4rem;
   color: #c6c6c6;
@@ -126,7 +131,7 @@ h1::before {
   padding: 40px;
 }
 
-.info li:nth-child(odd){
+.info li:nth-child(odd) {
   background-color: #f7f7f7;
 }
 
@@ -151,4 +156,40 @@ footer {
   text-align: center;
   padding: 40px;
   box-sizing: border-box;
+}
+
+@media (max-width: 1000px) {
+  .conteudo-vantagem {
+    grid-template-columns: 1fr;
+  }
+
+  .subtitulo {
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    gap: 2rem;
+    margin-top: 1.5rem;
+  }
+  .header {
+    gap: 2rem;
+  }
+  .conteudo {
+    grid-template-columns: 1fr;
+  }
+
+  .intro {
+    text-align: left;
+    justify-items: start;
+  }
+
+  h1::before {
+    display: none;
+  }
+
+  .subtitulo {
+    font-size: 3rem;
+  }
 }
